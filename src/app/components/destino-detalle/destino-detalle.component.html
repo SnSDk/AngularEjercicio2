@@ -1,0 +1,16 @@
+<p>
+  Barcelona, la capital cosmopolita de la región de Cataluña en España, es conocida por su arte y arquitectura. La fantástica iglesia de la Sagrada Familia y otros hitos modernistas diseñados por Antoni Gaudí adornan la ciudad. El Museo Picasso y la Fundación Joan Miró muestran el arte moderno de los artistas que dan origen a sus nombres. El Museo de Historia de Barcelona (MUHBA) incluye varios sitios arqueológicos romanos.
+  <!--
+    <br>
+    {{ destino.id }}
+    <br>
+    {{ destino.nombre }}
+    -->
+  <mgl-map [style]="style" [zoom]="[2]">
+    <mgl-marker [lngLat]="[-75.551012, 10.421185]">
+      <div onclick="alert('Hola')" class="marker">
+        <b>BARCELONA</b>
+      </div>
+    </mgl-marker>
+  </mgl-map>
+</p>

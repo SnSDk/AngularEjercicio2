@@ -1,0 +1,40 @@
+<div class="card-content">
+                    <div class="card-img">
+                    <img src="http://lorempixel.com/350/230/" alt="img top">
+                    <span>{{position}}</span>
+                    </div>
+                    <div class="card-desc">
+                    <h4 style="text-align: center;">{{destino.nombre}}</h4>
+                    <p style="color: rgb(71, 18, 18);">Servicios:
+                        <li *ngFor="let s of destino.servicios">
+                            <span [ngSwitch]="s">
+                                <i *ngSwitchCase="'Desayuno'" style="color: rgb(44, 0, 0);">{{s}}</i>
+                                <i *ngSwitchCase="'Pileta'" style="color:rgb(92, 0, 0);">{{s}}</i>
+                                <i *ngSwitchCase="'Videojuegos'" style="color:rgb(95, 0, 0);">{{s}}</i>
+                                <i *ngSwitchCase="'Natacion'" style="color:rgb(165, 0, 0);">{{s}}</i>
+                                <i *ngSwitchCase="'Football'" style="color:rgb(185, 0, 0);">{{s}}</i>
+                                <i *ngSwitchCase="'Cine'" style="color:rgb(212, 0, 0);">{{s}}</i>
+                                <i *ngSwitchCase="'Tenis'" style="color:rgb(255, 0, 0);">{{s}}</i>
+                                <i *ngSwitchDefault>{{s}}</i>
+                            </span>
+                        </li>
+                      </p>
+                        <p style="text-align: center;">
+                            Votar:
+                        </p>
+                        <p style="text-align: center;">
+                            
+                            <a href="#" (click)="voteUp()"><i class="material-icons md-18"></i></a>
+                            <a href="#" (click)="voteDown()"><i class="material-icons md-18"></i></a>
+                        </p> 
+                    <a href="#" class="btn-card" (click)="ir()"> Marcar</a>
+                    <span *ngIf="destino.isSelected()">
+                        <span ngNonBindable> Marcado como Favorito</span>
+                    </span>
+                    <p>
+
+                    </p>		
+                    <a [routerLink]="['/destino']"> Ver Detalle</a>	
+</div>
+</div>
+    
